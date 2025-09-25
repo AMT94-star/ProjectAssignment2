@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Plush plushie1 = new Plush(123456, "Pika", 43, "soft plush");
         ProductRepository productRepository = new ProductRepository();
         boolean running = true;
         Scanner input = new Scanner(System.in);
+        
         while (running) {
             menu();
             switch (input.nextLine()) {
