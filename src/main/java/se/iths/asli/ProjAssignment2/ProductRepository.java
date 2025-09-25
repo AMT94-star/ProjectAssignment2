@@ -70,6 +70,8 @@ public class ProductRepository {
     }
 
     public void viewInfoOnProduct() {
+        //ändra så att all product info kommer med produktlistan i ovanstående metod
+        //istället
         System.out.println("Choose the product you want to view");
         getProductList();
         int chosenProductNumber = scanner.nextInt();
