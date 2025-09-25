@@ -47,6 +47,7 @@ public class ProductRepository {
                 articleNumber = scanner.nextInt();
                 System.out.println("Please enter price");
                 price = scanner.nextDouble();
+                scanner.nextLine();
                 System.out.println("Please enter description");
                 description = scanner.nextLine();
                 productList.add(new Plush(articleNumber, title, price, description));
