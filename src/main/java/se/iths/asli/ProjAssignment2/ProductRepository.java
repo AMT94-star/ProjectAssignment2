@@ -23,6 +23,7 @@ public class ProductRepository {
                 int articleNumber = scanner.nextInt();
                 System.out.println("Please enter price");
                 double price = scanner.nextDouble();
+                scanner.nextLine();
                 System.out.println("Please enter description");
                 String description = scanner.nextLine();
                 productList.add(new Figurines(articleNumber, title, price, description));
@@ -34,6 +35,7 @@ public class ProductRepository {
                 articleNumber = scanner.nextInt();
                 System.out.println("Please enter price");
                 price = scanner.nextDouble();
+                scanner.nextLine();
                 System.out.println("Please enter description");
                 description = scanner.nextLine();
                 productList.add(new Pins(articleNumber, title, price, description));
