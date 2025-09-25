@@ -59,9 +59,22 @@ public class ProductRepository {
 
     public void getProductList() {
         System.out.println("Here are all the products in our shop");
-        for (Product product : productList) {
-            Product currentProduct = product;
-            System.out.println(currentProduct.getTitle());
+        for (int i = 0; i < productList.size(); i++) {
+            Product currentProduct = productList.get(i);
+            System.out.println(currentProduct.getTitle() + "\n Category: " +
+                    currentProduct.category());
         }
+    }
+
+    public void viewInfoOnProduct() {
+        System.out.println("Choose the product you want to view");
+        getProductList();
+        int chosenProductNumber = scanner.nextInt();
+
+        Product chosenProduct = productList.get(chosenProductNumber);
+        System.out.println(chosenProduct.getTitle() + "\nCategory: " +
+                chosenProduct.category() + "\nPrice: " + chosenProduct.getPrice() +
+                "\nDescription: " + chosenProduct.getDescription());
+
     }
 }

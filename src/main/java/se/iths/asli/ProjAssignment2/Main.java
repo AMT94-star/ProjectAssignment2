@@ -10,7 +10,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
         while (running) {
             menu();
-            input.nextLine();
             switch (input.nextLine()) {
                 case "1":
                     productRepository.addProduct();
@@ -18,6 +17,15 @@ public class Main {
                 case "2":
                     productRepository.getProductList();
                     break;
+                case "3":
+                    productRepository.viewInfoOnProduct();
+                    break;
+                case "4":
+                    System.out.println("You have chosen to exit. Goodbye!");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid input. Please try again");
             }
         }
 
