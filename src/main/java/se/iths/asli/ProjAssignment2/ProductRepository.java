@@ -64,22 +64,28 @@ public class ProductRepository {
         System.out.println("Here are all the products in our shop");
         for (int i = 0; i < productList.size(); i++) {
             Product currentProduct = productList.get(i);
-            System.out.println(currentProduct.getTitle() + "\n Category: " +
-                    currentProduct.category());
+            System.out.println("Item: " + currentProduct.getTitle() +
+                    "\n -Category: " + currentProduct.category() +
+                    "\n -Price: " + currentProduct.getPrice() +
+                    "\n -Description: " + currentProduct.getDescription());
         }
     }
 
     public void viewInfoOnProduct() {
-        //ändra så att all product info kommer med produktlistan i ovanstående metod
-        //istället
-        System.out.println("Choose the product you want to view");
-        getProductList();
+        System.out.println("Search for product by article number: ");
         int chosenProductNumber = scanner.nextInt();
 
-        Product chosenProduct = productList.get(chosenProductNumber);
-        System.out.println(chosenProduct.getTitle() + "\nCategory: " +
-                chosenProduct.category() + "\nPrice: " + chosenProduct.getPrice() +
-                "\nDescription: " + chosenProduct.getDescription());
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getArticleNumber() == chosenProductNumber) {
+                Product chosenProduct = productList.get(chosenProductNumber);
+                System.out.println(chosenProduct.getTitle() + "\nCategory: " +
+                        chosenProduct.category() + "\nPrice: " + chosenProduct.getPrice() +
+                        "\nDescription: " + chosenProduct.getDescription() +
+                        "\nArticle number: " + chosenProduct.getArticleNumber());
+            } else {
+                System.out.println("No product with that article number was found");
+            }
+        }
 
     }
 }
