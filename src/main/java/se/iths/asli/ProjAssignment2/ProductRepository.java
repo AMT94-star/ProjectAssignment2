@@ -77,8 +77,8 @@ public class ProductRepository {
         int chosenProductNumber = scanner.nextInt();
 
         for (int i = 0; i < productList.size(); i++) {
+            Product chosenProduct = productList.get(i);
             if (productList.get(i).getArticleNumber() == chosenProductNumber) {
-                Product chosenProduct = productList.get(i);
 
                 System.out.println("Item: " + chosenProduct.getTitle() +
                         "\n -Category: " + chosenProduct.category() +
@@ -88,6 +88,8 @@ public class ProductRepository {
             } else if (productList.get(i).getArticleNumber() != chosenProductNumber) {
                 System.out.println("No product with that article number was found");
                 //the else if gets triggered when choosing the first and second options?
+                //Whenever something gets added the previous option gets the above message
+                //added to it
             }
         }
 
