@@ -78,15 +78,16 @@ public class ProductRepository {
 
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getArticleNumber() == chosenProductNumber) {
-                Product chosenProduct = productList.get(chosenProductNumber);
-                
-                System.out.println(chosenProduct.getTitle() +
-                        "\nCategory: " + chosenProduct.category() +
-                        "\nPrice: " + chosenProduct.getPrice() +
-                        "\nDescription: " + chosenProduct.getDescription() +
-                        "\nArticle number: " + chosenProduct.getArticleNumber());
-            } else {
+                Product chosenProduct = productList.get(i);
+
+                System.out.println("Item: " + chosenProduct.getTitle() +
+                        "\n -Category: " + chosenProduct.category() +
+                        "\n -Price: " + chosenProduct.getPrice() +
+                        "\n -Description: " + chosenProduct.getDescription() +
+                        "\n -Article number: " + chosenProduct.getArticleNumber());
+            } else if (productList.get(i).getArticleNumber() != chosenProductNumber) {
                 System.out.println("No product with that article number was found");
+                //the else if gets triggered when choosing the first and second options?
             }
         }
 
