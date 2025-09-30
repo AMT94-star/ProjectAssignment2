@@ -67,7 +67,8 @@ public class ProductRepository {
             System.out.println("Item: " + currentProduct.getTitle() +
                     "\n -Category: " + currentProduct.category() +
                     "\n -Price: " + currentProduct.getPrice() +
-                    "\n -Description: " + currentProduct.getDescription());
+                    "\n -Description: " + currentProduct.getDescription() +
+                    "\n -Article Number: " + currentProduct.getArticleNumber());
         }
     }
 
@@ -78,8 +79,10 @@ public class ProductRepository {
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getArticleNumber() == chosenProductNumber) {
                 Product chosenProduct = productList.get(chosenProductNumber);
-                System.out.println(chosenProduct.getTitle() + "\nCategory: " +
-                        chosenProduct.category() + "\nPrice: " + chosenProduct.getPrice() +
+                
+                System.out.println(chosenProduct.getTitle() +
+                        "\nCategory: " + chosenProduct.category() +
+                        "\nPrice: " + chosenProduct.getPrice() +
                         "\nDescription: " + chosenProduct.getDescription() +
                         "\nArticle number: " + chosenProduct.getArticleNumber());
             } else {
