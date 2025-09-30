@@ -85,7 +85,7 @@ public class ProductRepository {
                         "\n -Price: " + chosenProduct.getPrice() +
                         "\n -Description: " + chosenProduct.getDescription() +
                         "\n -Article number: " + chosenProduct.getArticleNumber());
-            } else if (productList.get(i).getArticleNumber() != chosenProductNumber) {
+            } else {
                 System.out.println("No product with that article number was found");
                 //the else if gets triggered when choosing the first and second options?
                 //Whenever something gets added the previous option gets the above message
