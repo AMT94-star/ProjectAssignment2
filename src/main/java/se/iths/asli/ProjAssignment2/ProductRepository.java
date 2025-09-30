@@ -79,7 +79,6 @@ public class ProductRepository {
         for (int i = 0; i < productList.size(); i++) {
             Product chosenProduct = productList.get(i);
             if (productList.get(i).getArticleNumber() == chosenProductNumber) {
-
                 System.out.println("Item: " + chosenProduct.getTitle() +
                         "\n -Category: " + chosenProduct.category() +
                         "\n -Price: " + chosenProduct.getPrice() +
