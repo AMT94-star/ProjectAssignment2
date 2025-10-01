@@ -74,22 +74,24 @@ public class ProductRepository {
 
     public void viewInfoOnProduct() {
         System.out.println("Search for product by article number: ");
-        int chosenProductNumber = scanner.nextInt();
+        int chosenProductArticleNum = scanner.nextInt();
+
+        boolean articleNumFound = false;
 
         for (int i = 0; i < productList.size(); i++) {
             Product chosenProduct = productList.get(i);
-            if (chosenProduct.getArticleNumber() == chosenProductNumber) {
+
+            if (chosenProduct.getArticleNumber() == chosenProductArticleNum) {
                 System.out.println("Item: " + chosenProduct.getTitle() +
                         "\n -Category: " + chosenProduct.category() +
                         "\n -Price: " + chosenProduct.getPrice() +
                         "\n -Description: " + chosenProduct.getDescription() +
                         "\n -Article number: " + chosenProduct.getArticleNumber());
-            } else {
-                System.out.println("No product with that article number was found");
-                //the else if gets triggered when choosing the first and second options?
-                //Whenever something gets added the previous option gets the above message
-                //added to it
+                articleNumFound = true;
             }
+        }
+        if (!articleNumFound) {
+            System.out.println("No product with that article number was found");
         }
 
     }
