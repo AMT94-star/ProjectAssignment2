@@ -15,11 +15,8 @@ public class JOptionPaneUI implements UI {
 
     @Override
     public String menu() {
-        String[] options = {
-                "1. Add product",
-                "2. View all products",
-                "3. View information about the product",
-                "4.Exit"
+        String[] options = {"1. Add product", "2. View all products",
+                "3. View information about the product", "4.Exit"
         };
 
         String mainMenuText = "Welcome to my webshop, please choose an option\n";

@@ -17,10 +17,7 @@ public class ProductRepository {
         String choice = ui.prompt("Please choose a category to add a product to\n" +
                 "1. Figurines\n2. Pins\n3. Plushies\n4. Exit");
 //        System.out.println("Please choose a category to add a product to");
-//        System.out.println("1. Figurines");
-//        System.out.println("2. Pins");
-//        System.out.println("3. Plushies");
-//        System.out.println("4. Exit");
+//        System.out.println("1. Figurines\n2. Pins\n3. Plushies\n4. Exit");
         //String choice = scanner.nextLine();
         switch (choice) {
             case "1":
